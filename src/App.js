@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, Typography } from "@mui/material";
+import UserManagement from "./components/UserManagement";
+import RoleManagement from "./components/RoleManagement";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ padding: 2 }}>
+      <Typography variant="h3" align="center" gutterBottom>
+        User and Role Management System
+      </Typography>
+      <UserManagement />
+      <RoleManagement />
+    </Box>
   );
-}
+};
 
 export default App;
